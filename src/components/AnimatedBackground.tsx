@@ -52,6 +52,10 @@ const AnimatedBackground: React.FC = () => {
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       particlesRef.current.forEach((particle, index) => {
+        // Continuous movement
+        particle.x += Math.sin(Date.now() * 0.001 + index) * 0.2;
+        particle.y += Math.cos(Date.now() * 0.0008 + index) * 0.15;
+        
         // Mouse interaction
         const dx = mouseRef.current.x - particle.x;
         const dy = mouseRef.current.y - particle.y;
@@ -82,12 +86,14 @@ const AnimatedBackground: React.FC = () => {
         particle.vx *= 0.99;
         particle.vy *= 0.99;
 
+        // Add subtle pulsing effect
+        const pulseSize = particle.size + Math.sin(Date.now() * 0.003 + index) * 0.5;
         // Draw particle
         ctx.save();
         ctx.globalAlpha = particle.opacity;
         ctx.fillStyle = `hsl(${particle.hue}, 70%, 60%)`;
         ctx.beginPath();
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.arc(particle.x, particle.y, Math.max(0.5, pulseSize), 0, Math.PI * 2);
         ctx.fill();
         ctx.restore();
 

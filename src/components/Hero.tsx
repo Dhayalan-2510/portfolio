@@ -14,25 +14,25 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
       {/* Animated Background */}
       <AnimatedBackground />
       
       {/* Additional Background Effects */}
       <div className="absolute inset-0 z-2">
         <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-20 left-10 w-96 h-96 bg-green-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse wave-animation"></div>
-          <div className="absolute top-40 right-10 w-80 h-80 bg-emerald-400 rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-1000 float-animation"></div>
-          <div className="absolute -bottom-8 left-20 w-72 h-72 bg-lime-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-2000 rotate-slow"></div>
+          <div className="absolute top-32 left-10 w-96 h-96 bg-green-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse wave-animation"></div>
+          <div className="absolute top-52 right-10 w-80 h-80 bg-emerald-400 rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-1000 float-animation"></div>
+          <div className="absolute bottom-8 left-20 w-72 h-72 bg-lime-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-2000 rotate-slow"></div>
         </div>
       </div>
 
-      <div className="container mx-auto px-6 text-center relative z-10">
+      <div className="container mx-auto px-6 text-center relative z-10 mt-16">
         <div className="max-w-5xl mx-auto">
           {/* Profile Image */}
-          <div className="mb-8 animate-fade-in">
+          <div className="mb-12 animate-fade-in">
             <div className="relative inline-block">
-              <div className="w-48 h-48 mx-auto mb-8 relative group">
+              <div className="w-56 h-56 mx-auto mb-8 relative group">
                 <div className="absolute inset-0 bg-gradient-to-r from-green-400 via-emerald-500 to-green-600 rounded-full animate-pulse glow-effect"></div>
                 <img
                   src="/src/assets/profile.jpg"

@@ -163,36 +163,36 @@
   width: 300px;
   height: 300px;
   background: linear-gradient(45deg, #22c55e, #16a34a);
-  top: 10%;
+  top: 15%;
   left: 10%;
-  animation-delay: 0s;
+  animation: float 8s ease-in-out infinite, wave 6s ease-in-out infinite;
 }
 
 .bg-orb:nth-child(2) {
   width: 200px;
   height: 200px;
   background: linear-gradient(45deg, #10b981, #059669);
-  top: 60%;
+  top: 65%;
   right: 20%;
-  animation-delay: 2s;
+  animation: float 10s ease-in-out infinite 2s, wave 8s ease-in-out infinite 1s;
 }
 
 .bg-orb:nth-child(3) {
   width: 250px;
   height: 250px;
   background: linear-gradient(45deg, #34d399, #22c55e);
-  bottom: 20%;
+  bottom: 25%;
   left: 30%;
-  animation-delay: 4s;
+  animation: float 12s ease-in-out infinite 4s, rotate-slow 15s linear infinite;
 }
 
 .bg-orb:nth-child(4) {
   width: 180px;
   height: 180px;
   background: linear-gradient(45deg, #6ee7b7, #34d399);
-  top: 30%;
+  top: 35%;
   right: 10%;
-  animation-delay: 6s;
+  animation: float 9s ease-in-out infinite 6s, wave 7s ease-in-out infinite 3s;
 }
 
 /* Interactive background particles */
